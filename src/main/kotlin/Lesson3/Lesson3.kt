@@ -77,7 +77,7 @@ var interviews: String = "Интервью"
 val privacyPolicy: String = "Политика конфиденциальности"
 
 // Приватные отзывы (фидбэк) участников и зрителей для анализа проблем.
-privat var privateReviews: String = "Приватные отзывы"
+private var privateReviews: String = "Приватные отзывы"
 
 // Текущая температура в помещении
 var roomTemperature: Byte = 25
@@ -126,12 +126,12 @@ private val emergencyServicesContacts: String = "Контакты"
 val conditionsForParticipantsWithDisabilities: String = "Особые условия"
 
 // Общее настроение участников (определяется опросами)
-lateinit var participantsMood: String = "Общее настроение участников"
+lateinit var participantsMood: String
 
 // Подробный план хакатона, включающий время и содержание каждого сегмента, инициализируется непосредственно перед началом мероприятия.
 
 // Имя знаменитого специального гостя, которое будет объявлено за день до мероприятия.
-lateinit var specialGuest: String = "Имя знаменитого специального гостя"
+lateinit var specialGuest: String
 
 // Максимальное количество людей, которое может вместить место проведения.
 val maximumPeople: Int = 100
