@@ -61,10 +61,11 @@ val purchaseAmount: Int = 1100
 val bonusPointsNumber = calculateBonusPointsNumber (purchaseAmount)
 
 fun calculateBonusPointsNumber (purchaseAmount: Int): Int {
+    val dif = purchaseAmount / 100
     return if (purchaseAmount <= 1000) {
-        (purchaseAmount / 100) * 2
+        purchaseAmount * 2
     } else {
-        (purchaseAmount / 100) * 5
+        purchaseAmount * 5
     }
 }
 
@@ -90,3 +91,4 @@ fun typeDeterminant (fileExtension: String): String {
 // Единицу измерения нужно передать вторым аргументом функции. Несколько аргументов передаются через запятую.
 // Возвращать нужно строку.
 //Подсказка: для генерации строки из числа и буквы можно использовать шалон “$result F” для фаренгейта или “$result C” для цельсия
+
