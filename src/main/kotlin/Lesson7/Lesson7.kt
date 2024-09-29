@@ -19,7 +19,7 @@ fun main() {
     //usingBreak2()
     //usingСontinue()
     //usingСontinue2()
-    nestedCycle()
+    //nestedCycle()
 }
 //Цикл for, который выводит числа от 1 до 5.
 fun directRange () {
@@ -147,7 +147,7 @@ fun usingСontinue2(){
 fun nestedCycle(){
     for (i in 1..10) {
         for (i2 in 1..10) {
-            print(i*i2)
+            print(i * i2)
             print(" ")
         }
         println()
