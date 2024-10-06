@@ -58,7 +58,6 @@ val abbreviation = createAbbreviation(phrase)
 fun createAbbreviation(phrase: String): String {
     val words = phrase.split(" ", "-", "_")
     var abbreviation = ""
-
     for (word in words) {
         if (word.isNotEmpty()) {
             abbreviation += word[0].uppercase()
