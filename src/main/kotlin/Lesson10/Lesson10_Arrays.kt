@@ -30,6 +30,7 @@ fun main() {
     val stringArray: Array<String?> = arrayOf(null, "+", "-")
     println(stringArray.toList())
 
+// 6. Копирование массива целых чисел в новый массив в цикле.
 
 }
 
