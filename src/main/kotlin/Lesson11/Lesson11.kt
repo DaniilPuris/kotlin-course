@@ -86,7 +86,7 @@ fun main() {
         listOf(3,4) to "b",
         listOf(5,6) to "c"
     )
-    for ((key, value) in map4) {
+    //for ((key, value) in map4) {
 
 
 
