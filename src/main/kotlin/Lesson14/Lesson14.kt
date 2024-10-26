@@ -48,8 +48,8 @@ fun main(){
         "bugName2" to "bugreport2",
         "bugName3" to "bugreport3"
     )
-    val updatedBugReport = bagReports - "bugName3"
-    println(updatedBugReport)
+    bagReports.remove("bugName3")
+    println(bagReports)
 
 /* 6. Для словаря с результатами тестирования веб-страниц
       (ключ — URL страницы, значение — статус ответа),
@@ -94,26 +94,78 @@ fun main(){
       (ключ — название параметра конфигурации),
       получение значения для "browserType". Ответ не может быть null.
 */
+    val testEnvironmentConfigurations = mapOf<String, String>(
+        "testServer" to "param1",
+        "localBuild" to "param2",
+        "browserType" to "param3"
+    )
+    val browserType = testEnvironmentConfigurations
+        .getOrDefault("browserType", "")
+    println("$browserType")
+
 
 /* 10. Создание копии неизменяемого словаря с данными о версиях тестируемого ПО,
        чтобы добавить новую версию.
 */
+    val softwareTestVersions = mapOf<String, Double>(
+        "software1" to 1.0,
+        "software2" to 3.2,
+        "software3" to 2.2
+    )
+    val softwareTestVersions2 = softwareTestVersions + ("software4" to 3.5)
+    println("$softwareTestVersions2")
 
 /* 11. Используя словарь с настройками тестирования для различных мобильных устройств
        (ключ — модель устройства), получаем настройки для конкретной модели
        или возвращаем настройки по умолчанию.
 */
-
+    val mobileDevicesTestSettings = mapOf<String, String>(
+        "model1" to "settings1",
+        "model2" to "settings2",
+        "model3" to "settings3"
+    )
+    val model3 = mobileDevicesTestSettings.getOrDefault(
+        "model3", "DefaultSettings"
+    )
+    println("$model3")
 
 /* 12. Проверка, содержит ли словарь с ошибками тестирования
        (код и описание) определенный код ошибки.
 */
+    val testErrors = mapOf<Int, String>(
+        100 to "Description1",
+        200 to "Description2",
+        300 to "Description2"
+    )
+    val e400 = testErrors.containsKey(400)
+    println("$e400")
 
-/* 13.
+/* 13. Неизменяемый словарь, где ключи — это идентификаторы тестовых сценариев
+       в формате "TestID_Version", а значения — статусы выполнения этих тестов
+       ("Passed", "Failed", "Skipped").
+       Отфильтруйте словарь, оставив только те сценарии,
+       идентификаторы которых соответствуют определённой версии тестов.
 */
+    val testStatuses = mapOf<String, String>(
+        "TestID_Version_1" to "Passed",
+        "TestID_Version_2" to "Failed",
+        "TestID_Version_3" to "Skipped"
+    )
+    val versionToFilter = "Version_3"
+    val testCasesFilter = testStatuses.filterKeys { key ->
+        key.contains(versionToFilter)
+    }
+    println(testCasesFilter)
 
-/* 14.
+/* 14. Словарь, где ключи — это названия функциональных модулей приложения,
+       а значения — результаты их тестирования.
+       Проверяем, есть ли модули с неудачным тестированием
 */
-
+    val functionalModules = mapOf<String, String>(
+        "module1" to "Passed",
+        "module2" to "Failed",
+        "module3" to "Failed",
+    )
+println(functionalModules.any {it.value == "Failed"})
 
 }
