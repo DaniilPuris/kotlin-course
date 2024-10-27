@@ -167,5 +167,9 @@ fun main(){
         "module3" to "Failed",
     )
 println(functionalModules.any {it.value == "Failed"})
-
 }
+/* 15.
+*/
+
+/* 16.
+*/
