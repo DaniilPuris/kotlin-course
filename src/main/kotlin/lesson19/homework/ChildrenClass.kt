@@ -6,9 +6,9 @@ class ChildrenClass(
     // объясни, почему этот аргумент доступен в main() несмотря на то, что это не поле
     // потому что в классе родителе он публичный
     publicVal: String
-) : BaseClass(privateVal, protectedVal, publicVal) {
+) : BaseClass(privateVal, protectedVal, publicVal) //{
 
-    override fun verifyPublicField(value: String): Boolean {
+    /*override fun verifyPublicField(value: String): Boolean {
         return true
     }
 
@@ -26,3 +26,4 @@ class ChildrenClass(
         println("Печать из класса ChildrenClass")
     }
 }
+*/

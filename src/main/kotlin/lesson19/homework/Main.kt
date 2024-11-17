@@ -1,5 +1,6 @@
 package com.daniilpuris.lesson19.homework
 
+/*
 fun main(){
     var slotMachine00 = SlotMachine ("red","Model 01",false,false, mutableListOf("poker", "tetris"),
         slotMachine00.turnOn()
@@ -21,4 +22,4 @@ fun main(){
 
     println(childrenClass.getAll())
 
-}
+}*/

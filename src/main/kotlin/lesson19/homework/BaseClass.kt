@@ -10,6 +10,7 @@ abstract class BaseClass(
     val publicVal: String
 )
 
+/*
 var publicField = "измени меня из функции main() на Антонио Бандераса и проверь через функцию getAll()" +
         "Доработай ChildrenClass таким образом, чтобы это получилось"
     set(value) {
@@ -59,4 +60,4 @@ private fun getPrivateClass() = PrivateClass()
 protected class ProtectedClass
 
 private class PrivateClass
-}
+}*/
