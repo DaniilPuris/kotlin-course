@@ -7,5 +7,5 @@ package com.daniilpuris.lesson22.homework
 */
 
 fun <T> MutableList<T>.elementList(arg1: T?, arg2: Int): T? {
-    return "$arg1, $arg2"
+    return arg1 ?: getOrNull(arg2)
 }
