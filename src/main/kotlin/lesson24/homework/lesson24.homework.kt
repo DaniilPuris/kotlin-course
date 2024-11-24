@@ -1,38 +1,66 @@
 package com.daniilpuris.lesson24.homework
 
-fun main(){
+fun main() {
 
     // NullPointerException
-//    val a: Int? = null
-//    println(a!!)
+    try {
+        val a: Int? = null
+        println(a!!)
+    } catch (e: Exception) {
+        println("Ошибка NullPointerException")
+    }
 
     // ArrayIndexOutOfBoundsException
-//    val b:Array<Int> = arrayOf(1)
-//    println(b[2])
+    try {
+        val b: Array<Int> = arrayOf(1)
+        println(b[2])
+    } catch (e: Exception) {
+        println("Ошибка ArrayIndexOutOfBoundsException")
+    }
 
     // ClassCastException
-//    val c: Any = 1
-//    val number = c as String
+    try {
+        val c: Any = 1
+        val number = c as String
+    } catch (e: Exception) {
+        println("Ошибка ClassCastException")
+    }
 
     // NumberFormatException
-//    val d = "d".toInt()
+    try {
+        val d = "d".toInt()
+    } catch (e: Exception) {
+        println("Ошибка NumberFormatException")
+    }
 
     // IllegalArgumentException
-
-    // IllegalStateException
+    try {
+        val illegalArgumentException = false
+        require(illegalArgumentException)
+    } catch (e: Exception) {
+        println("Ошибка illegalStateException")
+    }
 
     // OutOfMemoryError
-//    var outOfMemoryList = mutableListOf("data1", "data2")
-//    while (true) {
-//        outOfMemoryList.add("More data")
-//    }
+    try {
+        var outOfMemoryList = mutableListOf("data1", "data2")
+        while (true) {
+            outOfMemoryList.add("More data")
+        }
+    } catch (e: OutOfMemoryError) {
+        println("Ошибка OutOfMemoryError")
+    }
 
     // StackOverflowError
-    stackOverflowError()
+    try {
+        stackOverflowError()
+    } catch (e: StackOverflowError) {
+        println("Ошибка StackOverflowError")
+    }
 
 }
 
 // StackOverflowError
-fun stackOverflowError(){
-    fun stackOverflowError(){}
+fun stackOverflowError() {
+    stackOverflowError()
 }
