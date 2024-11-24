@@ -1,7 +1,5 @@
 package com.daniilpuris.lesson21.homework
 
-import kotlin.collections.EmptyMap.keys
-
 fun main(){
 
 }
