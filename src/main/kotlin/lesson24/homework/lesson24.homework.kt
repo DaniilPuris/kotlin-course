@@ -22,9 +22,17 @@ fun main(){
     // IllegalStateException
 
     // OutOfMemoryError
+//    var outOfMemoryList = mutableListOf("data1", "data2")
+//    while (true) {
+//        outOfMemoryList.add("More data")
+//    }
 
     // StackOverflowError
+    stackOverflowError()
 
+}
 
-
+// StackOverflowError
+fun stackOverflowError(){
+    fun stackOverflowError(){}
 }
