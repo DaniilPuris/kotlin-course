@@ -67,14 +67,14 @@ fun main() {
     }
 
     try {
-        val filteredStrings = filterStringsByLength(strings, minLength)
+        val filteredStrings = filterStringsByLength4(strings, minLength)
         println(filteredStrings)
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
 
     try {
-        val result = filterStringsByLength(emptyStrings, minLength)
+        val result = filterStringsByLength4(emptyStrings, minLength)
         println(result)
     } catch (e: IllegalArgumentException) {
         println(e.message)
