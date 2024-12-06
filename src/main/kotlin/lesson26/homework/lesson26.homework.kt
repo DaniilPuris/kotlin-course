@@ -6,7 +6,7 @@ fun main() {
 
     val result = filterStrings(words) { it.length > 2 }
 
-    println(result)  // Выведет: [banana, cherry, elderberry]
+    println(result)
 
 }
 
