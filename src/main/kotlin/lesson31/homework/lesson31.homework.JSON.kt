@@ -1,5 +1,8 @@
 package com.daniilpuris.lesson31.homework
 
+import com.google.gson.GsonBuilder
+import java.io.File
+
 fun main() {
 
     // Иерархия сотрудников
@@ -54,6 +57,23 @@ fun main() {
         position = CharacterTypes.CTO,
         subordinates = listOf(teamLead1, teamLead2)
     )
+
+
+    // Сериализация CTO в текст с настройкой prettyPrinting.
+    val gson = GsonBuilder().setPrettyPrinting().create()
+    val json = gson.toJson(cto)
+
+    // Запись текста в файл в корне проекта.
+    File("cto.json").writeText(json)
+
+    // Чтение из файла
+    val jsonText = File("cto.json").readText()
+    
+    // Десериализация JSON в объект Employee
+    val deserializedCto = gson.fromJson(jsonText, Employee::class.java)
+    
+    // Вывод в консоль
+    println(deserializedCto)
 
 }
 
